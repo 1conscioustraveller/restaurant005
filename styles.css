@@ -1105,3 +1105,35 @@ section {
 :root.dark-mode h2 {
     color: var(--text-color) !important; /* Force override */
 }
+
+/* 3D Menu Cards*/
+.menu-item {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover {
+    transform: rotateY(15deg) translateY(-10px);
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 10%;
+    width: 80%;
+    height: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    filter: blur(10px);
+    transform: rotateX(60deg) scale(0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover::after {
+    opacity: 1;
+}
+
+
