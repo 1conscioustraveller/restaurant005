@@ -601,6 +601,12 @@ section {
     margin-bottom: 5px;
 }
 
+
+:root.dark-mode {
+    /* Your existing dark mode variables... */
+    --secondary-color: #e0e0e0; /* Light gray (adjust to match your theme) */
+}
+
 .guest-info p {
     font-size: 0.8rem;
     color: var(--text-light);
