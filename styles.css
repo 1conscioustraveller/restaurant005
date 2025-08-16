@@ -1107,7 +1107,7 @@ section {
     --dark-color: #f9f5f0;
     --text-color: #eee;
     --text-light: #bbb;
-    --white: #ffffff; /* ← Force white to stay pure white */
+    
     --black: #1a1a1a; /* Adjust for better contrast */
 }
 
