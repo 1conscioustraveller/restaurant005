@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Delight | Fine Dining Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Gourmet<span>Delight</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn reservation-btn">Reservations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero" id="home">
+        <div class="video-background">
+            <!-- PASTE YOUTUBE URL HERE -->
+            <iframe id="hero-video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Exquisite Dining Experience</h1>
+            <p>Where culinary art meets exceptional service</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#" class="btn btn-secondary">Book a Table</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">Discover our passion for culinary excellence</p>
+                <p>Founded in 2010, Gourmet Delight has been serving exceptional dishes crafted with locally-sourced ingredients and innovative techniques. Our chef brings 20 years of international experience to create a menu that blends traditional flavors with modern presentation.</p>
+                <div class="signature">
+                    <img src="images/signature.png" alt="Chef's Signature">
+                    <p>Executive Chef Michael Laurent</p>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-frame">
+                    <img src="images/chef.jpg" alt="Our Chef">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers-section">
+        <div class="container">
+            <h2 class="section-title">Today's Specials</h2>
+            <p class="section-subtitle">Seasonal creations from our chef</p>
+            <div class="offers-slider">
+                <div class="offer-card">
+                    <div class="offer-img">
+                        <img src="images/dish1.jpg" alt="Special Dish">
+                        <div class="offer-badge">Chef's Pick</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Truffle Infused Risotto</h3>
+                        <p>Creamy Arborio rice with wild mushrooms and black truffle shavings</p>
+                        <div class="price">$28</div>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-img">
+                        <img src="images/dish2.jpg" alt="Special Dish">
+                        <div class="offer-badge">New</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Pan-Seared Scallops</h3>
+                        <p>With cauliflower purée, crispy pancetta, and lemon beurre blanc</p>
+                        <div class="price">$32</div>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-img">
+                        <img src="images/dish3.jpg" alt="Special Dish">
+                        <div class="offer-badge">Popular</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Chocolate Soufflé</h3>
+                        <p>Warm chocolate soufflé with vanilla bean ice cream</p>
+                        <div class="price">$16</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Crafted with passion and precision</p>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="starters">Starters</button>
+                <button class="tab-btn" data-tab="mains">Main Courses</button>
+                <button class="tab-btn" data-tab="desserts">Desserts</button>
+                <button class="tab-btn" data-tab="drinks">Drinks</button>
+            </div>
+            
+            <div class="menu-content">
+                <div class="menu-category active" id="starters">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Bruschetta Trilogy</h3>
+                            <div class="price">$14</div>
+                        </div>
+                        <p>Three varieties: classic tomato & basil, mushroom & truffle, and roasted pepper</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Seared Foie Gras</h3>
+                            <div class="price">$24</div>
+                        </div>
+                        <p>With brioche toast, fig compote, and aged balsamic reduction</p>
+                    </div>
+                    <!-- More items would go here -->
+                </div>
+                
+                <div class="menu-category" id="mains">
+                    <!-- Main course items would go here -->
+                </div>
+                
+                <div class="menu-category" id="desserts">
+                    <!-- Dessert items would go here -->
+                </div>
+                
+                <div class="menu-category" id="drinks">
+                    <!-- Drink items would go here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">A glimpse of our culinary creations</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery1.jpg" alt="Dish Photo">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <!-- More gallery items would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <p class="section-subtitle">Experiences worth sharing</p>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The scallops were perfectly cooked, and the service was impeccable. We'll definitely be back for our anniversary next year!"</p>
+                    <div class="guest-info">
+                        <img src="images/guest1.jpg" alt="Guest Photo">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Food Critic</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- More testimonials would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Reservation Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Gourmet Street, Culinary District, NY 10001</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>reservations@gourmetdelight.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Monday - Saturday: 11:00 AM - 11:00 PM<br>Sunday: 10:00 AM - 9:00 PM</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            
+            <div class="reservation-form">
+                <h3>Make a Reservation</h3>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Number of Guests</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3-4">3-4 People</option>
+                            <option value="5+">5+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="time" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Special Requests"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Gourmet Delight</h3>
+                    <p>Exquisite dining experience in the heart of the city. We pride ourselves on exceptional service and innovative cuisine.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates on special events and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gourmet Delight. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Modal for Image Gallery -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Reservation Success Modal -->
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h3>Reservation Confirmed!</h3>
+                <p>Thank you for booking with us. We've sent a confirmation to your email.</p>
+                <button class="btn btn-primary" id="closeReservationModal">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
