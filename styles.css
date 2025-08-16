@@ -546,6 +546,10 @@ section {
     background-color: var(--light-color);
 }
 
+:root.dark-mode .testimonials-section {
+    background-color: #d4a373;
+}
+
 .testimonials-slider {
     display: flex;
     gap: 30px;
