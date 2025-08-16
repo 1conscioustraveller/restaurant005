@@ -563,6 +563,11 @@ section {
     scroll-snap-align: start;
 }
 
+:root.dark-mode {
+    /* Your existing dark mode variables... */
+    --primary-color: #d4a373; /* Light brown (adjust to your preference) */
+}
+
 .rating {
     color: var(--accent-color);
     margin-bottom: 20px;
