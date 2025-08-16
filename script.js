@@ -202,3 +202,17 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollReveal.reveal('.menu-item', { interval: 100 });
     scrollReveal.reveal('.gallery-item', { interval: 100 });
 });
+
+/* Add to JS (`script.js`): */
+// Dark Mode Toggle
+const darkModeToggle = document.createElement('button');
+darkModeToggle.className = 'dark-mode-toggle';
+darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+document.body.appendChild(darkModeToggle);
+
+darkModeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+    darkModeToggle.innerHTML = document.documentElement.classList.contains('dark-mode') 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
+});
