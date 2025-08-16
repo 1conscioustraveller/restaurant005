@@ -1116,6 +1116,17 @@ section {
     background-color: var(--white) !important; /* Forces white in both modes */
 }
 
+/* In your :root.dark-mode declaration */
+:root.dark-mode {
+    --section-title-color: var(--text-color); /* Reuses your existing light text color */
+    /* or define a specific color: */
+    --section-title-color: #f0f0f0; /* Slightly off-white */
+}
+
+/* Apply it to your section title */
+.section-title {
+    color: var(--section-title-color, initial); /* Falls back to initial if variable not set */
+}
 
 /* Default (Light Mode) */
 h1, h2 {
