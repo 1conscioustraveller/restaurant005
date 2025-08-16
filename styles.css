@@ -1075,7 +1075,7 @@ section {
 :root.dark-mode {
     --light-color: #2a2118;
     --dark-color: #f9f5f0;
-    --text-color: #eee;
+    --text-color: #F8F6F0;
     --text-light: #bbb;
     --white: #2a2118;
     --black: #f9f5f0;
