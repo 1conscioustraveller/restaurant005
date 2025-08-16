@@ -1122,6 +1122,12 @@ h1, h2 {
     color: var(--text-color); /* Default: #333 (define in :root) */
 }
 
+/* Dark Mode - Apply to subheadings, paragraphs, or links*/
+:root.dark-mode h3,
+:root.dark-mode p,
+:root.dark-mode a {
+    color: var(--text-color);
+}
 
 /* 3D Menu Cards*/
 .menu-item {
