@@ -1101,6 +1101,21 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+:root.dark-mode {
+    /* Keep all existing dark mode variables */
+    --light-color: #2a2118;
+    --dark-color: #f9f5f0;
+    --text-color: #eee;
+    --text-light: #bbb;
+    --white: #ffffff; /* ← Force white to stay pure white */
+    --black: #1a1a1a; /* Adjust for better contrast */
+}
+
+/* Explicitly set menu item background */
+.menu-item {
+    background-color: var(--white) !important; /* Forces white in both modes */
+}
+
 
 /* 3D Menu Cards*/
 .menu-item {
