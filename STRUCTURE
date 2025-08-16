@@ -1,0 +1,5 @@
+restaurant-website/
+│── index.html
+│── styles.css
+│── script.js
+│── images/ (you'll need to add your own images)
