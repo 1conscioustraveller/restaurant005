@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Video Background - This would be replaced with your YouTube embed
     // PASTE YOUTUBE URL HERE - The script below will format it for embedding
-    const youtubeUrl = ''; // You'll paste your URL here
+    const youtubeUrl = 'https://www.youtube.com/watch?v=9OquUp6x5IU'; // You'll paste your URL here
     
     if (youtubeUrl) {
         const videoId = youtubeUrl.split('v=')[1];
