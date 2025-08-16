@@ -1157,3 +1157,12 @@ section {
 .menu-item:hover::after {
     opacity: 1;
 }
+
+/* Extend Dark Mode to Other Elements
+Apply the same pattern to subheadings, paragraphs, or links */
+
+:root.dark-mode h3,
+:root.dark-mode p,
+:root.dark-mode a {
+    color: var(--text-color);
+}
