@@ -1102,16 +1102,6 @@ section {
 }
 
 
-/* Dark Mode - Text Colors */
-:root.dark-mode h1,
-:root.dark-mode h2,
-:root.dark-mode h3,
-:root.dark-mode p,
-:root.dark-mode a {
-    color: var(--text-color); /* No !important needed if using variables everywhere */
-}
-
-
 :root.dark-mode h1,
 :root.dark-mode h2 {
     color: var(--text-color) !important; /* Force override */
