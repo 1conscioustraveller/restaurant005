@@ -1101,14 +1101,6 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Extend Dark Mode to Other Elements
-Apply the same pattern to subheadings, paragraphs, or links */
-
-:root.dark-mode h3,
-:root.dark-mode p,
-:root.dark-mode a {
-    color: var(--text-color);
-}
 
 /* 3D Menu Cards*/
 .menu-item {
