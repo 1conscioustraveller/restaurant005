@@ -1101,10 +1101,13 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Extend Dark Mode to Other Elements
+Apply the same pattern to subheadings, paragraphs, or links */
 
-:root.dark-mode h1,
-:root.dark-mode h2 {
-    color: var(--text-color) !important; /* Force override */
+:root.dark-mode h3,
+:root.dark-mode p,
+:root.dark-mode a {
+    color: var(--text-color);
 }
 
 /* 3D Menu Cards*/
@@ -1148,11 +1151,4 @@ section {
     opacity: 1;
 }
 
-/* Extend Dark Mode to Other Elements
-Apply the same pattern to subheadings, paragraphs, or links */
 
-:root.dark-mode h3,
-:root.dark-mode p,
-:root.dark-mode a {
-    color: var(--text-color);
-}
