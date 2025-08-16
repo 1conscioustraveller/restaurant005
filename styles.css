@@ -1117,6 +1117,12 @@ section {
 }
 
 
+/* Default (Light Mode) */
+h1, h2 {
+    color: var(--text-color); /* Default: #333 (define in :root) */
+}
+
+
 /* 3D Menu Cards*/
 .menu-item {
     perspective: 1000px;
