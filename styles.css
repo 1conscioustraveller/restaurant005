@@ -1,5 +1,10 @@
-/* Base Styles */
+/* ===== CSS IMPORTS ===== */
+/* Add your @import statements here if you have any */
+/* @import url('...'); */
+
+/* ===== CSS VARIABLES & THEMING ===== */
 :root {
+    /* Light Theme (Default) */
     --primary-color: #c19a6b;
     --secondary-color: #3d2b1f;
     --accent-color: #e8c07d;
@@ -14,8 +19,23 @@
     --transition: all 0.3s ease;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
+    --section-title-color: var(--secondary-color);
 }
 
+:root.dark-mode {
+    /* Dark Theme */
+    --light-color: #2a2118;
+    --dark-color: #f9f5f0;
+    --text-color: #F8F6F0;
+    --text-light: #bbb;
+    --white: #2a2118;
+    --black: #f9f5f0;
+    --secondary-color: #362106; /* Dark mode footer color */
+    --primary-color: #d4a373; /* Light brown */
+    --section-title-color: var(--text-color);
+}
+
+/* ===== BASE & GLOBAL STYLES ===== */
 * {
     margin: 0;
     padding: 0;
@@ -41,12 +61,13 @@ section {
     padding: 80px 0;
 }
 
+/* ===== TYPOGRAPHY ===== */
 .section-title {
     font-family: var(--font-primary);
     font-size: 2.5rem;
     margin-bottom: 15px;
     text-align: center;
-    color: var(--secondary-color);
+    color: var(--section-title-color);
     position: relative;
 }
 
@@ -68,6 +89,14 @@ section {
     font-size: 1.1rem;
 }
 
+/* Dark Mode Typography */
+:root.dark-mode h3,
+:root.dark-mode p,
+:root.dark-mode a {
+    color: var(--text-color);
+}
+
+/* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -104,7 +133,7 @@ section {
     color: var(--primary-color);
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
 .navbar {
     position: fixed;
     top: 0;
@@ -200,7 +229,7 @@ section {
     background-color: var(--white);
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ===== */
 .hero {
     position: relative;
     height: 100vh;
@@ -284,7 +313,7 @@ section {
     margin: -10px;
 }
 
-/* About Section */
+/* ===== ABOUT SECTION ===== */
 .about-section {
     background-color: var(--white);
 }
@@ -347,7 +376,7 @@ section {
     color: var(--text-light);
 }
 
-/* Offers Section */
+/* ===== OFFERS SECTION ===== */
 .offers-section {
     background-color: var(--light-color);
 }
@@ -430,7 +459,7 @@ section {
     color: var(--primary-color);
 }
 
-/* Menu Section */
+/* ===== MENU SECTION ===== */
 .menu-section {
     background-color: var(--white);
 }
@@ -473,6 +502,11 @@ section {
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px dashed #ddd;
+    background-color: var(--white) !important; /* Forces white in both modes */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    position: relative;
 }
 
 .item-header {
@@ -496,7 +530,31 @@ section {
     font-size: 0.95rem;
 }
 
-/* Gallery Section */
+/* 3D Menu Card Effects */
+.menu-item:hover {
+    transform: rotateY(15deg) translateY(-10px);
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 10%;
+    width: 80%;
+    height: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    filter: blur(10px);
+    transform: rotateX(60deg) scale(0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover::after {
+    opacity: 1;
+}
+
+/* ===== GALLERY SECTION ===== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -541,7 +599,7 @@ section {
     font-size: 2rem;
 }
 
-/* Testimonials Section */
+/* ===== TESTIMONIALS SECTION ===== */
 .testimonials-section {
     background-color: var(--light-color);
 }
@@ -565,11 +623,6 @@ section {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     scroll-snap-align: start;
-}
-
-:root.dark-mode {
-    /* Your existing dark mode variables... */
-    --primary-color: #d4a373; /* Light brown (adjust to your preference) */
 }
 
 .rating {
@@ -610,12 +663,6 @@ section {
     margin-bottom: 5px;
 }
 
-
-:root.dark-mode {
-    /* Your existing dark mode variables... */
-    --secondary-color: #362106; /* Light gray (adjust to match your theme) */
-}
-
 .guest-info p {
     font-size: 0.8rem;
     color: var(--text-light);
@@ -623,7 +670,7 @@ section {
     margin: 0;
 }
 
-/* Contact Section */
+/* ===== CONTACT SECTION ===== */
 .contact-section {
     background-color: var(--white);
 }
@@ -716,7 +763,7 @@ section {
     resize: vertical;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 .footer {
     background-color: var(--secondary-color);
     color: var(--white);
@@ -820,6 +867,27 @@ section {
 .payment-methods i {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== UTILITY COMPONENTS ===== */
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Back to Top Button */
@@ -929,7 +997,7 @@ section {
     margin-bottom: 25px;
 }
 
-/* Animations */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -980,7 +1048,7 @@ section {
     }
 }
 
-/* Responsive Styles */
+/* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 992px) {
     .about-section .container,
     .contact-section .container {
@@ -1086,114 +1154,6 @@ section {
         grid-template-columns: 1fr;
     }
 }
-/* Dark Mode Variables */
-:root.dark-mode {
-    --light-color: #2a2118;
-    --dark-color: #f9f5f0;
-    --text-color: #F8F6F0;
-    --text-light: #bbb;
-    --white: #2a2118;
-    --black: #f9f5f0;
-}
 
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    z-index: 999;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-:root.dark-mode {
-    /* Keep all existing dark mode variables */
-    --light-color: #2a2118;
-    --dark-color: #f9f5f0;
-    --text-color: #eee;
-    --text-light: #bbb;
-    
-    --black: #1a1a1a; /* Adjust for better contrast */
-}
-
-/* Explicitly set menu item background */
-.menu-item {
-    background-color: var(--white) !important; /* Forces white in both modes */
-}
-
-/* In your :root.dark-mode declaration */
-:root.dark-mode {
-    --section-title-color: var(--text-color); /* Reuses your existing light text color */
-    /* or define a specific color: */
-    --section-title-color: #f0f0f0; /* Slightly off-white */
-}
-
-/* Apply it to your section title */
-.section-title {
-    color: var(--section-title-color, initial); /* Falls back to initial if variable not set */
-}
-
-/* Default (Light Mode) */
-h1, h2 {
-    color: var(--text-color); /* Default: #333 (define in :root) */
-}
-
-/* Dark Mode - Apply to subheadings, paragraphs, or links*/
-:root.dark-mode h3,
-:root.dark-mode p,
-:root.dark-mode a {
-    color: var(--text-color);
-}
-
-/* 3D Menu Cards*/
-.menu-item {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-    position: relative;
-    display: inline-block;
-    margin: 20px;
-    width: 200px;
-    height: 50px;
-    background: #3498db;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.menu-item:hover {
-    transform: rotateY(15deg) translateY(-10px);
-}
-
-.menu-item::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 10%;
-    width: 80%;
-    height: 20px;
-    background: rgba(0,0,0,0.1);
-    border-radius: 50%;
-    filter: blur(10px);
-    transform: rotateX(60deg) scale(0.9);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.menu-item:hover::after {
-    opacity: 1;
-}
-
-
+// The code above was organized by DeepSeek taken into account the
+// ORIGINAL style.css FILE because it was messy.   
